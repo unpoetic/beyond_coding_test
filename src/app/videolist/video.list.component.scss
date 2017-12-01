@@ -1,0 +1,73 @@
+li {
+	list-style: none;
+	float: left;
+	border: 1px solid #ccc;
+	margin: 5px;
+	width: 100%;
+
+	#videoThumb {
+		margin: 2px;
+		padding: 2px;
+		float:left;
+	}
+
+	#videoInfo{
+		margin: 2px;
+		padding: 2px;
+		width: 50%;
+		float:left;
+	}
+
+	.title {
+		font-family: 'Helvetica Bold', 'Helvetica';
+	    font-weight: 700;
+	    font-style: normal;
+	    font-size: 24px;
+	    color: #5E5E5E;
+	    display: inline-block;
+	}
+
+	.publishedOn {
+		font-family: 'Arial Bold', 'Arial';
+	    font-weight: 700;
+	    font-style: normal;
+	    font-size: 15px;
+	    color: #868686;
+	    line-height: 26px;
+	}
+
+	.description {
+		font-size: 15px;
+	    color: #868686;
+	    line-height: 26px;
+	    text-align:left;
+	    font-family: 'Arial Regular', 'Arial';
+	    font-weight: 400;
+	    font-style: normal;
+	}
+}
+
+#title {
+	font-family: 'Helvetica Bold', 'Helvetica';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    color: #5E5E5E;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 480px) {
+	li {
+
+	}
+    #videoInfo {
+        clear:both;
+        width:100%!important;
+    }
+    .description {
+    	display:none;
+    }
+    #mobileDescription {
+    	margin-top:0px!important;
+    }
+}

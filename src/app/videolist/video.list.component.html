@@ -1,0 +1,15 @@
+<li *ngFor="let result of results" class="videoList" (click)="open($event, result)" [attr.data-vidID]="result.snippet.position">
+	<div>
+		<div *ngIf="result.snippet.thumbnails" id="videoThumb">
+	      <a routerLink="/video/{{result.id}}"><img src="{{result.snippet.thumbnails.medium.url}}" width="{{result.snippet.thumbnails.medium.width}}"></a>
+	    </div>
+	    <div *ngIf="!result.snippet.thumbnails" id="videoThumb" style="background: black; width: 320px; height: 180px"></div>
+	    <div id="videoInfo">
+	      <span class="badge title">{{ result.snippet.title}}</span><br>
+	      <span class="badge publishedOn">Published on: {{ result.snippet.publishedAt | date }}</span><br>
+        <span class="badge description">{{ (result.snippet.description.length>180)? (result.snippet.description | slice:0:179)+'...':(result.snippet.description) }}</span><br>
+      </div>
+  </div>
+</li>
+
+<router-outlet></router-outlet>
